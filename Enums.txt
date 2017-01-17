@@ -1,11 +1,11 @@
-The most secure and easy way to implement a **singleton** in java is by using **enums** (like you mentioned):
+The most secure and easy way to implement a singleton in java is by using enums (like you mentioned):
 	
 public enum ClassName {
 INSTANCE;
 	
 // fields, setters and getters
 }
-The enum semantics guarantees that there will be only one **INSTANCE**
+The enum semantics guarantees that there will be only one INSTANCE
 	
 If not using the enum approach, you must take care of quite a lot aspects, like race conditions and reflection. I've been breaking singletons of some frameworks, and abusing them, because they weren't properly written. The enum guarantees no one will break it.
 	
@@ -17,7 +17,7 @@ If you use enums instead of integers (or String codes), you increase compile-tim
 	
 BTW, overuse of enums might mean that your methods do too much (it's often better to have several separate methods, rather than one method that takes several flags which modify what it does), but if you have to use flags or type codes, enums are the way to go
 
-良葛格的話匣子 宣告常數時，通常使用大寫字母，並可以**底線**來區隔每個單字以利識別 ，例如像**TURN_LEFT**這樣的名稱。
+良葛格的話匣子 宣告常數時，通常使用大寫字母，並可以底線來區隔每個單字以利識別 ，例如像TURN_LEFT這樣的名稱。
 
 public enum Action {
     TURN_LEFT, 
