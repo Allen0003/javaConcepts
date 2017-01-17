@@ -1,0 +1,23 @@
+List Vs Set Vs Map 
+
+   1) Duplicity: 
+   1. 'List' allows duplicate elements. Any number of duplicate elements can be inserted
+			 into the list without affecting the same existing values and their indexes.
+   2. 'Set'  doesn’t allow duplicates. Set and all of the classes which implements Set interface 
+			 should have unique elements.
+   3. 'Map'  stored the elements as key & value pair. Map doesn’t allow duplicate keys while 
+			 it allows duplicate values.
+  
+   2) Null values: 
+   1. 'List' allows any number of null values.
+   2. 'Set'  allows single null value at most.
+   3. 'Map'  can have single null key at most and any number of null values.
+  
+   3) Order: 
+   1. 'List' and all of its implementation classes maintains the insertion order.
+   2. 'Set'  doesn’t maintain any order; still few of its classes sort the elements 
+			 in an order such as LinkedHashSet maintains the elements in insertion order.
+   3. 'Map'  also doesn’t stores the elements in an order, however few of its classes
+			 does the same. For e.g. TreeMap sorts the map in the ascending order of keys 
+			 and LinkedHashMap sorts the elements in the insertion order, the order in which 
+			 the elements got added to the LinkedHashMap.
