@@ -1,0 +1,33 @@
+Only can override 'public' method in parent's method.
+
+Cannot override 'private' method in parent's method.
+
+when want to override methods which in parent class, 
+
+you cannot let the power become 'limit' 
+
+however, you can let it become more powerful 
+
+here is the example code. 
+
+public class Car { 
+	private void test_private() {
+
+	}
+
+	public void test_public() {
+
+	} 
+} 
+
+
+public class RacingCar extends Car { 
+
+	public void test_private() { 
+		//ok 
+	} 
+
+	private void test_public() {
+		//not ok 
+	}
+}
