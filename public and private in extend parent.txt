@@ -1,13 +1,9 @@
-Only can override 'public' method in parent's method.
-
-Cannot override 'private' method in parent's method.
+1. Only can override 'public' method in parent's method.
+2. Cannot override 'private' method in parent's method.
 
 when want to override methods which in parent class, 
-
 you cannot let the power become 'limit' 
-
 however, you can let it become more powerful 
-
 here is the example code. 
 
 public class Car { 
