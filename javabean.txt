@@ -4,6 +4,7 @@ A JavaBean is just a standard
 2. A public no-argument constructor
 3. Implements Serializable.
 
-JavaBeans是Java中一種特殊的類，可以將多個對象封裝到一個對象（bean）中。特點是可序列化，提供無參建構元，提供getter方法和setter方法訪問對象的屬性。名稱中的「Bean」是用於Java的可重用軟體組件的慣用叫法。
+JavaBeans是Java中一種特殊的類，可以將多個對象封裝到一個對象（bean）中。特點是可序列化，提供無參建構元，
+提供getter方法和setter方法訪問對象的屬性。名稱中的「Bean」是用於Java的可重用軟體組件的慣用叫法。
 
 Reference: http://stackoverflow.com/questions/3295496/what-is-a-javabean-exactly
