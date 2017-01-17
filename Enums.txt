@@ -1,35 +1,23 @@
-The most secure and easy way to implement a singleton in java is by using
-enums (like you mentioned):
+The most secure and easy way to implement a **singleton** in java is by using **enums** (like you mentioned):
 	
 public enum ClassName {
 INSTANCE;
 	
 // fields, setters and getters
 }
-The enum semantics guarantees that there will be only one INSTANCE
+The enum semantics guarantees that there will be only one **INSTANCE**
 	
-If not using the enum approach, you must take care of quite a lot
-aspects, like race conditions and reflection. I've been breaking
-singletons of some frameworks, and abusing them, because they weren't
-properly written. The enum guarantees no one will break it.
+If not using the enum approach, you must take care of quite a lot aspects, like race conditions and reflection. I've been breaking singletons of some frameworks, and abusing them, because they weren't properly written. The enum guarantees no one will break it.
 	
-You should always use enums when a variable (especially a method
-parameter) can only take one out of a small set of possible values.
-Examples would be things like type constants (contract status:
-"permanent", "temp", "apprentice"), or flags ("execute now", "defer
+You should always use enums when a variable (especially a method parameter) can only take one out of a small set of possible values.
+Examples would be things like type constants (contract status: "permanent", "temp", "apprentice"), or flags ("execute now", "defer
 execution").
 	
-If you use enums instead of integers (or String codes), you increase
-compile-time checking and avoid errors from passing in invalid constants,
-and you document which values are legal to use.
+If you use enums instead of integers (or String codes), you increase compile-time checking and avoid errors from passing in invalid constants, and you document which values are legal to use.
 	
-BTW, overuse of enums might mean that your methods do too much (it's
-often better to have several separate methods, rather than one method
-that takes several flags which modify what it does), but if you have to
-use flags or type codes, enums are the way to go
+BTW, overuse of enums might mean that your methods do too much (it's often better to have several separate methods, rather than one method that takes several flags which modify what it does), but if you have to use flags or type codes, enums are the way to go
 
-良葛格的話匣子 宣告常數時，通常使用大寫字母，並可以底線來區隔每個單字以利識別
-，例如像TURN_LEFT這樣的名稱。
+良葛格的話匣子 宣告常數時，通常使用大寫字母，並可以**底線**來區隔每個單字以利識別 ，例如像**TURN_LEFT**這樣的名稱。
 
 public enum Action {
     TURN_LEFT, 
@@ -37,9 +25,7 @@ public enum Action {
     SHOOT
 }
 
-不用懷疑，在 Action.java 中撰寫範例 11.3 的內容然後編譯它，
-雖然語法上不像是在定義類別，但列舉型態骨子裏就是一個類別，所以您編譯完成後，
-會產生一個 Action.class 檔案。
+不用懷疑，在 Action.java 中撰寫範例 11.3 的內容然後編譯它，雖然語法上不像是在定義類別，但列舉型態骨子裏就是一個類別，所以您編譯完成後，會產生一個 Action.class 檔案。
 
 來看下面範例 11.4 瞭解如何使用定義好的列舉型態。
 
