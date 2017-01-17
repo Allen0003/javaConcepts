@@ -7,15 +7,18 @@ INSTANCE;
 }
 The enum semantics guarantees that there will be only one INSTANCE
 	
-If not using the enum approach, you must take care of quite a lot aspects, like race conditions and reflection. I've been breaking singletons of some frameworks, and abusing them, because they weren't properly written. The enum guarantees no one will break it.
+If not using the enum approach, you must take care of quite a lot aspects, like race conditions and reflection. I've been breaking
+singletons of some frameworks, and abusing them, because they weren't properly written. The enum guarantees no one will break it.
 	
 You should always use enums when a variable (especially a method parameter) can only take one out of a small set of possible values.
 Examples would be things like type constants (contract status: "permanent", "temp", "apprentice"), or flags ("execute now", "defer
 execution").
 	
-If you use enums instead of integers (or String codes), you increase compile-time checking and avoid errors from passing in invalid constants, and you document which values are legal to use.
+If you use enums instead of integers (or String codes), you increase compile-time checking and avoid errors from passing in invalid
+constants, and you document which values are legal to use.
 	
-BTW, overuse of enums might mean that your methods do too much (it's often better to have several separate methods, rather than one method that takes several flags which modify what it does), but if you have to use flags or type codes, enums are the way to go
+BTW, overuse of enums might mean that your methods do too much (it's often better to have several separate methods, rather than one
+method that takes several flags which modify what it does), but if you have to use flags or type codes, enums are the way to go
 
 良葛格的話匣子 宣告常數時，通常使用大寫字母，並可以底線來區隔每個單字以利識別 ，例如像TURN_LEFT這樣的名稱。
 
@@ -51,5 +54,6 @@ public class EnumDemo {
 }
 
 除了讓您少打一些字之外，這個範例好像沒有什麼特別的，但注意到 doAction() 參數列的型態是 Action，如果您對 doAction() 方法輸入其它型態的引數
-，編譯器會回報錯誤，因為 doAction() 所接受的引數必須是 Action 列舉型態。 使用列舉型態還可以作到更進一步的檢驗，如果您在 "switch" 中加入了不屬於 Action 中列舉的值，編譯器也會回報錯誤
+，編譯器會回報錯誤，因為 doAction() 所接受的引數必須是 Action 列舉型態。 使用列舉型態還可以作到更進一步的檢驗，如果您在 "switch" 中加入了不屬於
+Action 中列舉的值，編譯器也會回報錯誤
 
