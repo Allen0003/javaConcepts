@@ -1,0 +1,11 @@
+      	<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"  xmlns:ws="http://ws.mkyong.com/">
+			<soapenv:Header/>
+			<soapenv:Body>
+				<ws:getHelloWorldAsString>
+					<arg0>1</arg0>
+				</ws:getHelloWorldAsString>
+			</soapenv:Body>
+      	</soapenv:Envelope>
+
+
+Reference: https://www.mkyong.com/webservices/jax-ws/jax-ws-hello-world-example/
