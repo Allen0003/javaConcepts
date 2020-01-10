@@ -2,7 +2,7 @@
 
 Java 8
 
-** Stream **
+***** Stream *****
 
 1. Simply put, streams are wrappers around a data source, allowing us to operate with that data source and making bulk processing convenient and fast.
 
@@ -12,10 +12,23 @@ Java 8
 
 
 
-Meaning of :: in Java syntax 
+***** Meaning of :: in Java syntax *****
 
 This is method reference. Added in Java 8.
 
 TreeSet::new refers to the default constructor of TreeSet.
 
 In general A::B refers to method B in class A.
+
+
+
+
+
+
+
+***** AtomicInteger *****
+The package java.concurrent.atomic contains many useful classes to perform atomic operations. An operation is atomic when you can safely perform the operation in parallel on multiple threads without using the synchronized keyword or locks as shown in my previous tutorial.
+
+Internally, the atomic classes make heavy use of compare-and-swap (CAS), an atomic instruction directly supported by most modern CPUs. Those instructions usually are much faster than synchronizing via locks. 
+
+
