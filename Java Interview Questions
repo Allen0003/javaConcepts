@@ -1,0 +1,47 @@
+
+Q: Double click     
+A: adding uuid in the front-end
+
+Q: java finalize
+
+A: the finalize method provided by the root Object class.
+
+Simply put, this is called before the garbage collection for a particular object.
+
+
+Q: Implement tree map 
+
+A: A TreeMap is sorted by keys so that you need to implement 'compareTo' method.
+
+
+
+Q: Memory leak 
+
+A: The standard definition of a memory leak is a scenario that occurs when objects are no longer being used by the application, but the Garbage Collector is unable to remove them from working memory – because they’re still being referenced. As a result, the application consumes more and more resources – which eventually leads to a fatal OutOfMemoryError.
+
+
+An advantageous technique to understand these situations is to make reproducing a memory leak easier by setting a lower size for the Heap. That’s why, when starting our application, we can adjust the JVM to suit our memory needs:
+
+Example:
+
+private Random random = new Random();
+public static final ArrayList<Double> list = new ArrayList<Double>(1000000);
+
+@Test
+public void givenStaticField_whenLotsOfOperations_thenMemoryLeak() throws InterruptedException {
+    for (int i = 0; i < 1000000; i++) {
+        list.add(random.nextDouble());
+    }
+    
+    System.gc();
+    Thread.sleep(10000); // to allow GC do its job
+}
+
+We created our ArrayList as a static field – which will never be collected by the JVM Garbage Collector during the lifetime of the JVM process, even after the calculations it was used for are done. We also invoked Thread.sleep(10000) to allow the GC to perform a full collection and try to reclaim everything that can be reclaimed.
+
+Q: How to prevent it?
+
+First, we need to pay close attention to our usage of static; declaring any collection or heavy object as static ties its lifecycle to the lifecycle of the JVM itself, and makes the entire object graph impossible to collect.
+
+
+
