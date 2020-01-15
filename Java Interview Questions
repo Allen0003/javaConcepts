@@ -45,3 +45,84 @@ First, we need to pay close attention to our usage of static; declaring any coll
 
 
 
+
+Q: java spring ioc and dependency injection
+
+A: Inversion of Control is the same with dependency injection
+ 
+Inversion of Control is a principle in software engineering by which the control of objects or portions of a program is transferred to a container or framework. It's most often used in the context of object-oriented programming.
+
+Also, there are three types of ioc
+1. interface injection
+2. setting injection
+3. constructor injection
+example 2 is the first one 
+
+type 2 should rely on bean
+
+
+example 1:
+
+@Configuration
+class AppConfig {
+  @Bean
+  public Bar bar() { return new Bar(); }
+
+  @Bean
+  public Foo foo() { return new Foo(bar()); }
+}
+
+@Configuration
+class AppConfig {
+  @Bean
+  public Bar bar() { return new Bar(); }
+
+  @Bean
+  public Foo foo() {
+    Foo foo = new Foo();
+    foo.setBar(bar());
+
+    return foo;
+  }
+}
+
+
+example 2:
+
+
+public class Driver {
+
+    private Car car;
+
+    public Driver () {}
+
+    public Driver (Car car) {
+        this.car = car;
+    }
+
+    public void drive(){
+        car.startRunning();
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+}
+
+
+public class Test {
+    public static void main(String[] args) {
+        Driver driver = new Driver();
+
+        driver.setCar(new BMW());   
+
+        driver.drive();
+
+        driver.setCar(new Benz());  
+
+        driver.drive();
+
+    }
+}
+
+
