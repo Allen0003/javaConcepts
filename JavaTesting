@@ -1,0 +1,5 @@
+
+setup --> before
+teardown --> after
+
+We can prepare this within the test method but what a good alternative is override the setup and tearDown method. These methods will be called for each test case method calls. This will allow the test case to do a prepration and post clean up process for each of the JUnit method test call.
