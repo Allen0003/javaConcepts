@@ -1,0 +1,6 @@
+1. restTemplets --> call url and get string response
+	get from object
+
+perfectly ok to create repeated classes
+
+2. beans in spring are by default singletons
