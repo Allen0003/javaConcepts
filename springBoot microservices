@@ -15,5 +15,5 @@ perfectly ok to create repeated classes
 
 4. we should avoid returning a list object
 
-
+5. rest Apis are thread safe, but DB is not 
 
