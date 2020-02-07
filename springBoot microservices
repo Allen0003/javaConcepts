@@ -4,3 +4,7 @@
 perfectly ok to create repeated classes
 
 2. beans in spring are by default singletons
+ --> @Bean
+ 
+3. autowired --> somebody has bean annotation, inject to me
+--> @Autowired
