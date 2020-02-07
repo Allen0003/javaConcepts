@@ -12,3 +12,8 @@ perfectly ok to create repeated classes
  
 3. autowired --> somebody has bean annotation, inject to me
 --> @Autowired
+
+4. we should avoid returning a list object
+
+
+
