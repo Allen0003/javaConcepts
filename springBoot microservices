@@ -21,7 +21,7 @@ perfectly ok to create repeated classes
    client side discovery --> client calls discoevry server and gets response and then calls the atcural service
   
    **** spring cloud uses client side discovery  ******
-  
+   Eureka client and server
    https://www.youtube.com/watch?v=e09P-CkCvvs
     
    
