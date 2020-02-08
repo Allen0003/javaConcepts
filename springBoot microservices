@@ -19,8 +19,13 @@ perfectly ok to create repeated classes
 
 6. server side discovery --> client calls discovery server and then this server passes the message to the atcural service
    client side discovery --> client calls discoevry server and gets response and then calls the atcural service
-   
+  
+   **** spring cloud uses client side discovery  ******
+  
    https://www.youtube.com/watch?v=e09P-CkCvvs
+    
+   
+   
 
 
 
