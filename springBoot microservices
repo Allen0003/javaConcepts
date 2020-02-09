@@ -33,6 +33,7 @@ perfectly ok to create repeated classes
 9. using event-driven architecture to hendle data consistency 
 
    such as event-souring https://www.youtube.com/watch?v=sSm2dRarhPo in about 20 minutes
+   using CQRS
 
 
 
