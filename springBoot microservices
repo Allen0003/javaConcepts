@@ -25,7 +25,7 @@ perfectly ok to create repeated classes
    https://www.youtube.com/watch?v=e09P-CkCvvs
     
    
-7. discovering a server --> @LoadBalanced
+7. discovering a server --> @LoadBalanced --> cleint side load balancing and they use round robin scheduling so it is not a good balancing
 
 8. using a Eureka server, it doesn't call the server for a single request
    https://www.youtube.com/watch?v=tG2dA6zyEgM
