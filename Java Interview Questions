@@ -45,7 +45,6 @@ First, we need to pay close attention to our usage of static; declaring any coll
 
 
 
-
 Q: java spring ioc and dependency injection
 
 A: Inversion of Control is the same with dependency injection
@@ -126,7 +125,6 @@ public class Test {
 }
 
 
-
 Q: String vs StringBuffer vs StringBuilder
 
 
@@ -140,8 +138,6 @@ StringBuffer and StringBuilder are mutable objects in java and provide append(),
 *** StringBuffer is thread safe and synchronized whereas StringBuilder is not, thats why StringBuilder is more faster than StringBuffer.
 
 *** For String manipulations in non-multi threaded environment, we should use StringBuilder else use StringBuffer class.
-
-
 
 
 Q: J2ee
@@ -169,3 +165,45 @@ A: 1. One-to-One (1-1) relationship is defined as the relationship between two t
 
 
 
+Q: Comparator and Comparable
+
+A: If any class implements Comparable interface in Java then collection of that object either List or Array can be sorted automatically by using Collections.sort() or Arrays.sort()
+To summarize, if sorting of objects needs to be based on natural order then use Comparable whereas if you sorting needs to be done on attributes of different objects, then use Comparator in Java.
+
+
+
+Q: authentication and authorization
+
+A: Authentication means confirming your own identity, while authorization means granting access to the system. In simple terms, authentication is the process of verifying who you are, while authorization is the process of verifying what you have access to.
+
+
+
+
+Q: Checked vs Unchecked Exceptions
+ 
+A: Checked Exceptions --> Java forces you to handle these error scenarios in some manner in your application code. ClassNotFoundException, IOException, SQLException and so on.
+   Unchecked Exceptions --> RuntimeException. Example of unchecked exceptions 
+
+
+
+
+Q: Spring Key words
+
+A: @Component is a generic stereotype for any Spring-managed component or bean. 
+@Repository is a stereotype for the persistence layer.
+@Service is a stereotype for the service layer.
+@Controller is a stereotype for the presentation layer (spring-MVC).
+
+
+Q: create an Immutable class
+
+A: 
+1. The class must be declared as final (So that child classes can’t be created)
+2. Data members in the class must be declared as final (So that we can’t change the value of it after object creation)
+3. A parameterized constructor
+4. Getter method for all the variables in it
+5. No setters(To not have the option to change the value of the instance variable)
+
+Q: what is I want an Immutable list 
+
+A: using ImmutableList Class in JAVA
