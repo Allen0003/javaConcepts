@@ -152,3 +152,20 @@ Q: Java2EE Session
 
 A: just session nothing too special
 
+
+Q: One-to-One, One-to-Many Table Relationships in SQL Server
+
+A: 1. One-to-One (1-1) relationship is defined as the relationship between two tables where both the tables should be associated with each other based on only one matching row. 
+   This relationship can be created using Primary key-Unique foreign key constraints.
+   EX: a person can have only one passport. Let’s implement this in SQL Server.
+
+   2. The One-to-Many relationship is defined as a relationship between two tables where a row from one table can have multiple matching rows in another table. 
+   This relationship can be created using Primary key-Foreign key relationship.
+   EX:  a book can have multiple authors. Let’s implement this in SQL Server.
+
+   3. Many-to-many. Lastly, entities can also have a many-to-many relationship.
+   Let’s say you have a list of books, and a list of authors—each book may have one or more authors, and each author may have written multiple books.   
+
+
+
+
