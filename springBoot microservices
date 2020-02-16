@@ -38,3 +38,10 @@ perfectly ok to create repeated classes
 10. spring boot Swagger --> testing APIs pretty similar to Postman
 
 
+11. saga pattern
+
+can solve data consistence
+
+https://tuhrig.de/saga-pattern-with-spring-boot-and-activemq/
+
+
