@@ -2,6 +2,15 @@
 
 Java 8
 
+***** lambda ******
+
+You are obviously encountering the first-time initialization overhead of lambda expressions. As already mentioned in the comments, the classes for lambda expressions are generated at runtime rather than being loaded from your class path.
+
+However, being generated isn’t the cause for the slowdown. After all, generating a class having a simple structure can be even faster than loading the same bytes from an external source. 
+
+Since Leetcode itself apparently doesn’t use lambda expressions before entering your code, whose execution time gets measured, this overhead adds to your execution time here.
+
+
 ***** Stream *****
 
 1. Simply put, streams are wrappers around a data source, allowing us to operate with that data source and making bulk processing convenient and fast.
