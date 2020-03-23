@@ -1,0 +1,26 @@
+
+
+    public int testTryCatch(int a, int b) {
+        int result = -1;
+        try {
+            result = a / b;
+            return result;
+        } catch (Exception e) {
+            result = Integer.MIN_VALUE;
+            return result;
+        } finally {
+            result = Integer.MAX_VALUE;
+			//this value is never used
+        }
+    }
+	
+	
+	@Test
+    public void testTryCatchCase1() {
+        assertEquals(forTest.testTryCatch(100, 10), 10);
+    }
+
+    @Test
+    public void testTryCatchCase2() {
+        assertEquals(forTest.testTryCatch(100, 0), Integer.MIN_VALUE);
+    }
