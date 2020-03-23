@@ -3,3 +3,59 @@ setup --> before --> start connection
 teardown --> after --> end connection
 
 We can prepare this within the test method but what a good alternative is override the setup and tearDown method. These methods will be called for each test case method calls. This will allow the test case to do a prepration and post clean up process for each of the JUnit method test call.
+
+
+Mock/Stub
+
+Using Mockito
+
+EX:
+1. 
+import static org.mockito.Mockito.*;
+
+mockedList.add("one");
+
+mockedList.clear();
+
+verify(mockedList).add("one");
+
+verify(mockedList).clear();
+
+2. stub
+
+LinkedList mockedList = mock(LinkedList.class);
+
+//Stub
+
+when(mockedList.get(0)).thenReturn("first"); 
+
+when(mockedList.get(1)).thenThrow(new RuntimeException()); 
+
+System.out.println(mockedList.get(0)); //print first
+
+System.out.println(mockedList.get(1)); // throws RuntimeException
+
+System.out.println(mockedList.get(999)); //null
+
+verify(mockedList).get(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
