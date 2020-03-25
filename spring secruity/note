@@ -1,0 +1,15 @@
+
+
+
+spring secruity
+
+1. spring filter 
+
+2. Authentication --> provider
+
+call authenticate()
+
+ex: login and return user information
+
+
+vs authorization 
