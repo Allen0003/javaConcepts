@@ -12,4 +12,8 @@ call authenticate()
 ex: login and return user information
 
 
-vs authorization 
+Authentication vs authorization 
+
+Authentication --> answering the first question (who are you) Id and password
+
+authorization --> can this use do what he wants to do
