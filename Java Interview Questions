@@ -207,3 +207,10 @@ A:
 Q: what is I want an Immutable list 
 
 A: using ImmutableList Class in JAVA
+
+
+
+
+
+Singleton With Enum
+Since enums are inherently serializable, we don't need to implement it with a serializable interface. ... Therefore, it is 100% guaranteed that only one instance of the singleton is present within a JVM. Thus, this method is recommended as the best method of making singletons in Java.
