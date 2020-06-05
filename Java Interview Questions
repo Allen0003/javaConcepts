@@ -214,3 +214,44 @@ A: using ImmutableList Class in JAVA
 
 Singleton With Enum
 Since enums are inherently serializable, we don't need to implement it with a serializable interface. ... Therefore, it is 100% guaranteed that only one instance of the singleton is present within a JVM. Thus, this method is recommended as the best method of making singletons in Java.
+
+
+
+
+
+***** Memory Leak
+
+The standard definition of a memory leak is a scenario that occurs when objects are no longer being used by the application, but the Garbage Collector is unable to remove them from working memory – because they’re still being referenced. As a result, the application consumes more and more resources – which eventually leads to a fatal OutOfMemoryError.
+
+
+1. Static Field Holding On to the Object Reference --> reason JVM need to reference object
+
+2. Calling String.intern() on Long String
+
+Here, we simply try to load a large text file into running memory and then return a canonical form, using .intern().
+
+The intern API will place the str String in the JVM memory pool – where it can’t be collected – and again, this will cause the GC to be unable to free up enough memory:
+
+3. Unclosed Streams
+
+4. Unclosed Connections
+
+How to prevent it?
+
+1. First, we need to pay close attention to our usage of static; declaring any collection or heavy object as static ties its lifecycle to the lifecycle of the JVM itself, and makes the entire object graph impossible to collect.
+
+2.1 Please remember that interned String objects are stored in PermGen space – if our application is intended to perform a lot of operations on large strings, we might need to increase the size of the permanent generation:
+2.2 The second solution is to use Java 8 – where the PermGen space is replaced by the Metaspace – which won’t lead to any OutOfMemoryError when using intern on Strings:
+
+3. auto-close feature introduced in Java 8:
+
+
+try (BufferedReader br = new BufferedReader(
+  new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
+    // further implementation
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
+4. close it
+
