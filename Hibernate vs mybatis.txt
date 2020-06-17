@@ -6,7 +6,7 @@ Hibernate is an object-relational mapping framework (ORM) which maps Java classe
 MyBatis is a persistence framework – not ORM, which maps SQL statements to Java methods.
 
 
-Tcc uses this
+Tcc uses this (JPA)
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
