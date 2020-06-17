@@ -1,3 +1,10 @@
+
+interface in the Java programming language is an abstract type that is used to specify a behavior that classes must implement. They are similar to protocols. Interfaces are declared using the interface keyword
+
+@interface is used to create your own (custom) Java annotations. Annotations are defined in their own file, just like a Java class or interface. Here is custom Java annotation example:
+
+
+
 The @ symbol denotes an annotation type definition. 
 That means it is not really an interface, but rather a new annotation type -- to be used as a function modifier, such as @override. 
 See this 
