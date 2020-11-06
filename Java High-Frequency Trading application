@@ -1,0 +1,2 @@
+ This unique feature named ReadyNow!® means Java applications are always running at optimum speed, even after a restart.
+When you restart your application with an existing profile, the Azul JVM immediately recalls its previous decisions and compiles the outlined methods directly, solving the Java warm-up issue.
