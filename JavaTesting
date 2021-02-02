@@ -1,4 +1,6 @@
 
+https://medium.com/better-programming/with-this-framework-you-can-unit-test-java-architecture-characterstics-c82b50154dd0
+
 setup --> before --> start connection
 teardown --> after --> end connection
 
