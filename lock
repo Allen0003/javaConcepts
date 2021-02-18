@@ -1,0 +1,3 @@
+can split lock to read and write 
+
+https://medium.com/analytics-vidhya/advanced-locking-in-java-reentrant-read-write-lock-b40fce0833de
