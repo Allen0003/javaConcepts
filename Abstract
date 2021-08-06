@@ -1,0 +1,13 @@
+
+Look at this code that calculates and displays the area of a rectangle:
+
+int area = width * lenght;
+Console.WriteLine("area = " + area);
+
+This is totally dependent on a rectangle shape, and we are aware of the implementation details. 
+I won’t dive into the details of bad design here, but it could be redesigned as follows:
+
+int area = shape.GetArea();
+Console.WriteLine("area = " + area);
+
+We are no longer aware of the implementation details and only have to deal with the shape interface, which could be a rectangle or circle. Polymorphism is going on here.
