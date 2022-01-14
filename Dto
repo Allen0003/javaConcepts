@@ -1,0 +1,4 @@
+
+A DTO defines part or all of data defined by the underlying Domain object.
+
+https://medium.com/@enocklubowa/why-you-need-to-use-dtos-in-your-rest-api-d9d6d7be5450
