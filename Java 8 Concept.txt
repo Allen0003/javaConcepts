@@ -2,6 +2,47 @@
 
 Java 8
 
+***** stream ******
+
+Exercise 3: Print out the sum of ages of all female authors younger than 25.
+
+int sum = library.stream()
+          .map(Book::getAuthor)
+          .filter(author -> author.getGender() == Gender.FEMALE)
+          .map(Author::getAge)
+          .filter(age -> age < 25)
+          .reduce(0, Integer::sum)
+          
+Exercise 4: Return first employee with a salary greater than 100000 . If no such employee exists, then null is returned.          
+
+Employee employee = 
+      Stream.of(empIds)
+      .map(employeeRepository::findById)
+      .filter(e -> e != null)
+      .filter(e -> e.getSalary() > 100000)
+      .findFirst()
+      .orElse(null);
+      
+      
+      
+      
+Boxing and Unboxing      
+
+There’re times when we need to convert primitive values to their wrapper equivalents.
+
+List<Integer> evenInts = IntStream.rangeClosed(1, 10)
+  .filter(i -> i % 2 == 0)
+  .boxed()
+  .collect(Collectors.toList());
+  
+  
+// returns 78
+int sum = Arrays.asList(33,45)
+  .stream()
+  .mapToInt(i -> i)
+  .sum();
+
+
 ***** lambda ******
 
 You are obviously encountering the first-time initialization overhead of lambda expressions. As already mentioned in the comments, the classes for lambda expressions are generated at runtime rather than being loaded from your class path.
